@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-
+data:any={};
+arrayPerfil=[{'nombre':'Administrador', 'id':2}, {'nombre':'Usuario', 'id':3}];
+arrayEstado = [{
+  'nombre': 'Activo', 'id': 1
+},
+{
+  'nombre': 'Inactivo', 'id': 2
+}];
   constructor() { }
 
   ngOnInit() {
+  }
+
+  guardar(){
+
+    console.log(this.data);
+    
   }
 
 }
