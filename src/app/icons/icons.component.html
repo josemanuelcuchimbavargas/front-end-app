@@ -1,29 +1,76 @@
-
 <div class="main-content">
-  <div class="container-fluid">
-      <div class="card card-plain">
-          <div class="card-header card-header-danger">
-              <h4 class="card-title">Material Design Icons</h4>
-              <p class="card-category">Handcrafted by our friends from
-                  <a target="_blank" href="https://design.google.com/icons/">Google</a>
-              </p>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <div class="card-body">
-                      <div class="iframe-container d-none d-lg-block">
-                          <iframe src="https://design.google.com/icons/">
-                              <p>Your browser does not support iframes.</p>
-                          </iframe>
-                      </div>
-                      <div class="col-md-12 d-none d-sm-block d-md-block d-lg-none d-block d-sm-none text-center ml-auto mr-auto">
-                          <h5>The icons are visible on Desktop mode inside an iframe. Since the iframe is not working on Mobile and Tablets please visit the icons on their original page on Google. Check the
-                              <a href="https://design.google.com/icons/" target="_blank">Material Icons</a>
-                          </h5>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Empresa</h4>
+                        <p class="card-category">Formulario para la creación de una empresa</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.nit" [ngModelOptions]="{standalone: true}" placeholder="Nit">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.nombre" [ngModelOptions]="{standalone: true}" placeholder="Nombre">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.direccion" [ngModelOptions]="{standalone: true}" placeholder="Dirección" type="text">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.telefono" [ngModelOptions]="{standalone: true}" placeholder="Telefono" type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.email" [ngModelOptions]="{standalone: true}" placeholder="Email" type="email">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field>
+                                        <mat-label>Estado</mat-label>
+                                        <mat-select [(ngModel)]="data.estado" [ngModelOptions]="{standalone: true}">
+                                            <mat-option *ngFor="let estado of arrayEstado" [value]="estado.id">
+                                                {{estado.nombre}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="guardar()">Crear empresa</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-4">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <a href="javascript:void(0)">
+                            <img class="img" src="./assets/img/faces/marc.jpg" />
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                        <h4 class="card-title">Alec Thompson</h4>
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+                        <a href="javascript:void(0)" class="btn btn-danger btn-round">Follow</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
 </div>

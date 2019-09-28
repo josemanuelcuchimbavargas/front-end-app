@@ -9,7 +9,20 @@ export class IconsComponent implements OnInit {
 
   constructor() { }
 
+  arrayEstado = [{
+    'nombre': 'Activo', 'id': 1
+  },
+  {
+    'nombre': 'Inactivo', 'id': 2
+  }];
+
+  data: any = {};
+
   ngOnInit() {
+  }
+
+  guardar(){
+      console.log(this.data);
   }
 
 }
