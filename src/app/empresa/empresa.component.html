@@ -48,29 +48,62 @@
                                     </mat-form-field>
                                 </div>
                             </div>
-                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="guardar()">Crear empresa</button>
+                            <button mat-raised-button type="submit" class="btn btn-info pull-right">Listar Empresas</button>
+                            <button mat-raised-button type="submit" class="btn btn-success pull-right" (click)="guardar()">Crear empresa</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-4">
-                <div class="card card-profile">
-                    <div class="card-avatar">
-                        <a href="javascript:void(0)">
-                            <img class="img" src="./assets/img/faces/marc.jpg" />
-                        </a>
+            <!-- TABLA PARA LISTAR USUARIOS  -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Empresa</h4>
+                        <p class="card-category">Listado de empresas registradas y activas</p>
                     </div>
                     <div class="card-body">
-                        <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-                        <h4 class="card-title">Alec Thompson</h4>
-                        <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                        </p>
-                        <a href="javascript:void(0)" class="btn btn-danger btn-round">Follow</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        #
+                                    </th>
+                                    <th>
+                                        Nit
+                                    </th>
+                                    <th>
+                                        Nombre
+                                    </th>
+                                    <th>
+                                        Dirección
+                                    </th>
+                                    <th>
+                                        Teléfono
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Estado
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let usuario of arrayEmpresa; let i = index">
+                                        <td>{{i+1}}</td>
+                                        <td>{{usuario.nit}}</td>
+                                        <td>{{usuario.nombre}}</td>
+                                        <td>{{usuario.direccion}}</td>
+                                        <td>{{usuario.telefono}}</td>
+                                        <td>{{usuario.email}}</td>
+                                        <td class="text-primary">{{usuario.estado}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>

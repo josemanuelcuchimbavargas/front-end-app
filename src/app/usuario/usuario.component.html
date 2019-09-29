@@ -1,0 +1,122 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Usuarios</h4>
+                        <p class="card-category">Formulario para crear y listar usuarios</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.nDocumento" [ngModelOptions]="{standalone: true}" placeholder="No. Documento" type="number">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.nombre" [ngModelOptions]="{standalone: true}" placeholder="Nombre">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.direccion" [ngModelOptions]="{standalone: true}" placeholder="Dirección">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.telefono" [ngModelOptions]="{standalone: true}" placeholder="Teléfono" type="number">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field>
+                                        <mat-label>Perfil</mat-label>
+                                        <mat-select [(ngModel)]="data.perfil" [ngModelOptions]="{standalone: true}">
+                                            <mat-option *ngFor="let perfil of arrayPerfil" [value]="perfil.id">
+                                                {{perfil.nombre}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.contrasena" [ngModelOptions]="{standalone: true}" placeholder="Contraseña" type="password">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field>
+                                        <mat-label>Estado</mat-label>
+                                        <mat-select [(ngModel)]="data.estado" [ngModelOptions]="{standalone: true}">
+                                            <mat-option *ngFor="let estado of arrayEstado" [value]="estado.id">
+                                                {{estado.nombre}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <button mat-raised-button type="submit" class="btn btn-info pull-right">Listar Usuarios</button>
+                            <button mat-raised-button type="button" class="btn btn-success pull-right" (click)="guardar()">Crear Usuario</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TABLA PARA LISTAR USUARIOS  -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Usuarios</h4>
+                        <p class="card-category">Listado de usuarios registrados y activos</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        #
+                                    </th>
+                                    <th>
+                                        Numero documento
+                                    </th>
+                                    <th>
+                                        Nombre
+                                    </th>
+                                    <th>
+                                        Dirección
+                                    </th>
+                                    <th>
+                                        Teléfono
+                                    </th>
+                                    <th>
+                                        Perfil
+                                    </th>
+                                    <th>
+                                        Estado
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let usuario of arrayUsuario; let i = index">
+                                        <td>{{i+1}}</td>
+                                        <td>{{usuario.numeroDocumento}}</td>
+                                        <td>{{usuario.nombre}}</td>
+                                        <td>{{usuario.direccion}}</td>
+                                        <td>{{usuario.telefono}}</td>
+                                        <td>{{usuario.perfil}}</td>
+                                        <td class="text-primary">{{usuario.estado}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
