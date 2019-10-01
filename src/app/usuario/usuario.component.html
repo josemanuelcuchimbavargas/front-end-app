@@ -10,29 +10,29 @@
                     <div class="card-body">
                         <form>
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <mat-form-field class="example-full-width">
                                         <input matInput [(ngModel)]="data.nDocumento" [ngModelOptions]="{standalone: true}" placeholder="No. Documento" type="number">
                                     </mat-form-field>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <mat-form-field class="example-full-width">
                                         <input matInput [(ngModel)]="data.nombre" [ngModelOptions]="{standalone: true}" placeholder="Nombre">
                                     </mat-form-field>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <mat-form-field class="example-full-width">
                                         <input matInput [(ngModel)]="data.direccion" [ngModelOptions]="{standalone: true}" placeholder="Dirección">
                                     </mat-form-field>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <mat-form-field class="example-full-width">
                                         <input matInput [(ngModel)]="data.telefono" [ngModelOptions]="{standalone: true}" placeholder="Teléfono" type="number">
                                     </mat-form-field>
                                 </div>
-                                <div class="col-md-6">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
                                     <mat-form-field>
                                         <mat-label>Perfil</mat-label>
                                         <mat-select [(ngModel)]="data.perfil" [ngModelOptions]="{standalone: true}">
@@ -42,14 +42,12 @@
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
                                         <input matInput [(ngModel)]="data.contrasena" [ngModelOptions]="{standalone: true}" placeholder="Contraseña" type="password">
                                     </mat-form-field>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <mat-form-field>
                                         <mat-label>Estado</mat-label>
                                         <mat-select [(ngModel)]="data.estado" [ngModelOptions]="{standalone: true}">
