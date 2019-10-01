@@ -48,8 +48,10 @@
                                     </mat-form-field>
                                 </div>
                             </div>
-                            <button mat-raised-button type="submit" class="btn btn-info pull-right">Listar Empresas</button>
-                            <button mat-raised-button type="submit" class="btn btn-success pull-right" (click)="guardar()">Crear empresa</button>
+                            <div class="pull-right">
+                                <button mat-raised-button type="submit" class="btn btn-success" (click)="guardar()">Crear empresa</button>
+                                <button mat-raised-button type="submit" class="btn btn-info">Listar Empresas</button>
+                            </div>
                             <div class="clearfix"></div>
                         </form>
                     </div>

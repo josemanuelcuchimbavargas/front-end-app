@@ -1,59 +1,61 @@
 <div class="main-content">
-  <div class="container-fluid">
-      <div class="row">
-          <div class="col-md-12">
-              <div class="card">
-                  <div class="card-header card-header-danger">
-                      <h4 class="card-title ">Canchas</h4>
-                      <p class="card-category">Formulario para crear canchas</p>
-                  </div>
-                  <div class="card-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Nombre">
-                                </mat-form-field>
-                            </div>
-                            <div class="col-md-3">
-                                <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Precio" type="number">
-                                </mat-form-field>
-                            </div>
-                            <div class="col-md-3">
-                                <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Imagen" type="text">
-                                </mat-form-field>
-                            </div>
-                            <div class="col-md-3">
-                                <mat-form-field>
-                                    <mat-label>Estado</mat-label>
-                                    <mat-select [(ngModel)]="data.estado" [ngModelOptions]="{standalone: true}">
-                                        <mat-option *ngFor="let estado of arrayEstado" [value]="estado.id">
-                                            {{estado.nombre}}
-                                        </mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-                            </div>
-                        </div>
-                        <button mat-raised-button type="submit" class="btn btn-info pull-right">Listar Canchas</button>
-                        <button mat-raised-button type="submit" class="btn btn-success pull-right" (click)="guardar()">Crear Cancha</button>
-                        <div class="clearfix"></div>
-                    </form>
-                  </div>
-              </div>
-          </div>
-            <!-- TABLA PARA LISTAR CANCHAS  -->
+    <div class="container-fluid">
+        <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger">
                         <h4 class="card-title ">Canchas</h4>
-                        <p class="card-category">Listado de canchas registradas y activas</p>
+                        <p class="card-category">Formulario para crear canchas</p>
                     </div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead class=" text-primary">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.nombre" [ngModelOptions]="{standalone: true}" placeholder="Nombre">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3 ">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.precio " [ngModelOptions]="{standalone: true}" placeholder="Precio" type="number">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.imagen" [ngModelOptions]="{standalone: true}" placeholder="Imagen" type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3 ">
+                                    <mat-form-field>
+                                        <mat-label>Estado</mat-label>
+                                        <mat-select [(ngModel)]="data.estado" [ngModelOptions]="{standalone: true}">
+                                            <mat-option *ngFor="let estado of arrayEstado" [value]="estado.id ">
+                                                {{estado.nombre}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="pull-right">
+                                <button mat-raised-button type="button" class="btn btn-success" (click)="guardar() ">Crear Cancha</button>
+                                <button mat-raised-button type="submit" class="btn btn-info">Listar Canchas</button>
+                            </div>
+                            <div class="clearfix "></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- TABLA PARA LISTAR CANCHAS  -->
+            <div class="col-md-12 ">
+                <div class="card ">
+                    <div class="card-header card-header-danger ">
+                        <h4 class="card-title ">Canchas</h4>
+                        <p class="card-category ">Listado de canchas registradas y activas</p>
+                    </div>
+                    <div class="card-body ">
+                        <div class="table-responsive ">
+                            <table class="table ">
+                                <thead class=" text-primary ">
                                     <th>
                                         #
                                     </th>
@@ -71,12 +73,12 @@
                                     </th>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let cancha of arrayCancha; let i = index">
+                                    <tr *ngFor="let cancha of arrayCancha; let i=i ndex ">
                                         <td>{{i+1}}</td>
                                         <td>{{cancha.nombre}}</td>
                                         <td>{{cancha.precio}}</td>
-                                        <td>{{cancha.imagen}}</td>                                     
-                                        <td class="text-primary">{{cancha.estado}}</td>
+                                        <td>{{cancha.imagen}}</td>
+                                        <td class="text-primary ">{{cancha.estado}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -84,6 +86,6 @@
                     </div>
                 </div>
             </div>
-      </div>
-  </div>
+        </div>
+    </div>
 </div>
