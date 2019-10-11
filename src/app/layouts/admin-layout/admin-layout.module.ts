@@ -9,6 +9,8 @@ import { CanchaComponent } from '../../cancha/cancha.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { EmpresaComponent } from '../../empresa/empresa.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
+import { MaterialFileUploadComponent } from '../../cancha/file-upload/file-upload.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   MatButtonModule,
@@ -16,7 +18,9 @@ import {
   MatRippleModule,
   MatFormFieldModule,
   MatTooltipModule,
-  MatSelectModule
+  MatSelectModule,
+  MatIconModule,
+  MatProgressBarModule,
 } from '@angular/material';
 @NgModule({
   imports: [
@@ -30,6 +34,9 @@ import {
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    MatIconModule,
+    MatProgressBarModule,
+    HttpClientModule
   ],
   declarations: [
     DashboardComponent,
@@ -37,7 +44,8 @@ import {
     CanchaComponent,
     TypographyComponent,
     EmpresaComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    MaterialFileUploadComponent
   ]
 })
 

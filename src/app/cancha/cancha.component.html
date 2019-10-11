@@ -21,9 +21,10 @@
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-3">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput [(ngModel)]="data.imagen" [ngModelOptions]="{standalone: true}" placeholder="Imagen" type="text">
-                                    </mat-form-field>
+                                    <app-file-upload (complete)="onFileComplete($event)"></app-file-upload>
+                                    <!-- <mat-form-field class="example-full-width">
+                                        <input matInput [(ngModel)]="data.imagen" [ngModelOptions]="{standalone: true}" placeholder="Imagen" type="file">
+                                    </mat-form-field> -->
                                 </div>
                                 <div class="col-md-3 ">
                                     <mat-form-field>

@@ -28,4 +28,8 @@ export class CanchaComponent implements OnInit {
     console.log(this.data);
   }
 
+  onFileComplete(data: any) {
+    console.log(data); // We just print out data bubbled up from event emitter.
+  }
+
 }
